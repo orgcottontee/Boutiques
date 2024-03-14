@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: Error, LocalizedError {
     case badRequest
+    case unauthorized
     case notFound
     case invalidRequest
     case noInternetConnection
@@ -20,6 +21,8 @@ enum NetworkError: Error, LocalizedError {
         switch self {
         case .badRequest:
             return "The request failed, please try again later."
+        case .unauthorized:
+            return "We're having trouble accessing our server, please try again later."
         case .notFound:
             return "We're unable to load the details right now, please try again later."
         case .invalidRequest:

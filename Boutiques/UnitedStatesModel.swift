@@ -8,13 +8,12 @@
 import Foundation
 
 struct UnitedStatesModel: Codable {
-    
-    let records: [UnitedStatesBoutique]
+    let id: String
+    let fields: UnitedStatesBoutique
 }
 
 struct UnitedStatesResponse: Codable {
-    let id: String
-    let fields: UnitedStatesBoutique
+    let records: [UnitedStatesModel]
 }
 
 struct UnitedStatesBoutique: Codable {
