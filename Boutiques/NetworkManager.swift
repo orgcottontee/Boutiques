@@ -11,5 +11,7 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchUnitedStatesBoutiques() async throws -> [Boutiques]
+    func fetchUnitedStatesBoutiques() async throws -> [UnitedStatesModel] {
+        
+    }
 }
