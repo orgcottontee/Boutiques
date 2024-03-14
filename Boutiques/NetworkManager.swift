@@ -12,6 +12,8 @@ final class NetworkManager {
     static let shared = NetworkManager()
     
     func fetchUnitedStatesBoutiques() async throws -> [UnitedStatesModel] {
-        
+        guard let baseURL = URL(string: Constants.UnitedStatesAPI.baseURL) else {
+            throw Error
+        }
     }
 }

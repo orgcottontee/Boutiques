@@ -14,6 +14,7 @@
 		DEB8F09E2BA34EE500E95D06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F09D2BA34EE500E95D06 /* Constants.swift */; };
 		DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */; };
 		DEB8F0A22BA3508700E95D06 /* UnitedStatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A12BA3508700E95D06 /* UnitedStatesModel.swift */; };
+		DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		DEB8F09D2BA34EE500E95D06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DEB8F0A12BA3508700E95D06 /* UnitedStatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStatesModel.swift; sourceTree = "<group>"; };
+		DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				DEB8F0732BA21DE600E95D06 /* ContentView.swift */,
 				DEB8F07F2BA21F3100E95D06 /* Config.xcconfig */,
 				DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */,
+				DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */,
 				DEB8F09D2BA34EE500E95D06 /* Constants.swift */,
 				DEB8F0752BA21DE700E95D06 /* Assets.xcassets */,
 				DEB8F0772BA21DE700E95D06 /* Preview Content */,
@@ -153,6 +156,7 @@
 				DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */,
 				DEB8F0742BA21DE600E95D06 /* ContentView.swift in Sources */,
 				DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */,
+				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,
 				DEB8F09E2BA34EE500E95D06 /* Constants.swift in Sources */,
 				DEB8F0A22BA3508700E95D06 /* UnitedStatesModel.swift in Sources */,
 			);
