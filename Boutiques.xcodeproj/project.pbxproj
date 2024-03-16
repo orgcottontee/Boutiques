@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0712BA21DE600E95D06 /* BoutiquesApp.swift */; };
-		DEB8F0742BA21DE600E95D06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0732BA21DE600E95D06 /* ContentView.swift */; };
 		DEB8F0762BA21DE700E95D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB8F0752BA21DE700E95D06 /* Assets.xcassets */; };
 		DEB8F0792BA21DE700E95D06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB8F0782BA21DE700E95D06 /* Preview Assets.xcassets */; };
+		DEB8F09E2BA34EE500E95D06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F09D2BA34EE500E95D06 /* Constants.swift */; };
+		DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */; };
+		DEB8F0A22BA3508700E95D06 /* UnitedStatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A12BA3508700E95D06 /* UnitedStatesModel.swift */; };
+		DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */; };
+		DEB8F0A62BA364B600E95D06 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A52BA364B600E95D06 /* RootScreen.swift */; };
+		DEB8F0A82BA364DF00E95D06 /* UnitedStatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A72BA364DF00E95D06 /* UnitedStatesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DEB8F06E2BA21DE600E95D06 /* Boutiques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boutiques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB8F0712BA21DE600E95D06 /* BoutiquesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiquesApp.swift; sourceTree = "<group>"; };
-		DEB8F0732BA21DE600E95D06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DEB8F0752BA21DE700E95D06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEB8F0782BA21DE700E95D06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DEB8F07F2BA21F3100E95D06 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		DEB8F0802BA21F5500E95D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DEB8F09D2BA34EE500E95D06 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DEB8F0A12BA3508700E95D06 /* UnitedStatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStatesModel.swift; sourceTree = "<group>"; };
+		DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DEB8F0A52BA364B600E95D06 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		DEB8F0A72BA364DF00E95D06 /* UnitedStatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStatesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +65,15 @@
 			children = (
 				DEB8F0802BA21F5500E95D06 /* Info.plist */,
 				DEB8F0712BA21DE600E95D06 /* BoutiquesApp.swift */,
-				DEB8F0732BA21DE600E95D06 /* ContentView.swift */,
 				DEB8F07F2BA21F3100E95D06 /* Config.xcconfig */,
+				DEB8F09F2BA34F9800E95D06 /* NetworkManager.swift */,
+				DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */,
+				DEB8F0A52BA364B600E95D06 /* RootScreen.swift */,
+				DEB8F0A72BA364DF00E95D06 /* UnitedStatesViewModel.swift */,
+				DEB8F09D2BA34EE500E95D06 /* Constants.swift */,
 				DEB8F0752BA21DE700E95D06 /* Assets.xcassets */,
 				DEB8F0772BA21DE700E95D06 /* Preview Content */,
+				DEB8F0A12BA3508700E95D06 /* UnitedStatesModel.swift */,
 			);
 			path = Boutiques;
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB8F0742BA21DE600E95D06 /* ContentView.swift in Sources */,
+				DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */,
 				DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */,
+				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,
+				DEB8F0A82BA364DF00E95D06 /* UnitedStatesViewModel.swift in Sources */,
+				DEB8F09E2BA34EE500E95D06 /* Constants.swift in Sources */,
+				DEB8F0A22BA3508700E95D06 /* UnitedStatesModel.swift in Sources */,
+				DEB8F0A62BA364B600E95D06 /* RootScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -260,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
