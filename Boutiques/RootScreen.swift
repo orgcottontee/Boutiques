@@ -10,11 +10,23 @@ import Observation
 
 struct RootScreen: View {
     
-    private var viewModel = UnitedStatesViewModel()
+    @State private var viewModel = UnitedStatesViewModel()
+    @State private var searchText: String = ""
+    @State private var filteredBoutiques: [USBoutiqueRecord] = []
+    
+    private func performSearch(keyword: String) {
+        filteredBoutiques = viewModel.boutiques.filter { boutique in
+            boutique.fields.name.contains(keyword)
+        }
+    }
+    
+    private var boutiques: [USBoutiqueRecord] {
+        filteredBoutiques.isEmpty ? viewModel.boutiques : filteredBoutiques
+    }
     
     var body: some View {
         NavigationStack {
-            List(viewModel.boutiques, id: \.id) { boutique in
+            List(boutiques, id: \.id) { boutique in
                 HStack {
                     Text(boutique.fields.name)
                     Spacer()
@@ -29,6 +41,10 @@ struct RootScreen: View {
                     print("\(NetworkError.badRequest) from RootScreen")
                 }
             }
+        }
+        .searchable(text: $searchText)
+        .onChange(of: searchText) {
+            performSearch(keyword: searchText)
         }
     }
 }

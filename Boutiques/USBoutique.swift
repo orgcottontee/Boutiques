@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct UnitedStatesModel: Codable {
+struct USBoutiqueRecord: Codable {
     let id: String
-    let fields: UnitedStatesBoutique
+    let fields: USBoutique
 }
 
-struct UnitedStatesResponse: Codable {
-    let records: [UnitedStatesModel]
+struct USBoutiqueResponse: Codable {
+    let records: [USBoutiqueRecord]
 }
 
-struct UnitedStatesBoutique: Codable {
+struct USBoutique: Codable {
     let category: String
     let latitude: Double
     let state: String
@@ -26,7 +26,7 @@ struct UnitedStatesBoutique: Codable {
     let postalCode: Int
     let name: String
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case category = "Category"
         case latitude = "Latitude"
         case state = "State"

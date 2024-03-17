@@ -10,11 +10,12 @@ import Foundation
 @Observable
 final class UnitedStatesViewModel {
     
-    var boutiques: [UnitedStatesModel] = []
+    var boutiques: [USBoutiqueRecord] = []
     
+    @MainActor
     func getBoutiques() async throws {
         do {
-            boutiques = try await NetworkManager.shared.fetchUnitedStatesBoutiques()
+            boutiques = try await NetworkManager.shared.fetchUSBoutiques()
         } catch {
             throw NetworkError.notFound
         }
