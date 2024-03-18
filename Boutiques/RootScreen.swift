@@ -11,7 +11,7 @@ struct RootScreen: View {
     
     @State private var viewModel = UnitedStatesViewModel()
     @State private var searchText: String = ""
-    @State private var filteredBoutiques: [UnitedStatesDetails] = []
+    @State private var filteredBoutiques: [UnitedStatesResponse] = []
     
     private func performSearch(keyword: String) {
         filteredBoutiques = boutiques.filter { boutique in
@@ -19,7 +19,7 @@ struct RootScreen: View {
         }
     }
     
-    private var boutiques: [UnitedStatesDetails] {
+    private var boutiques: [UnitedStatesResponse] {
         filteredBoutiques.isEmpty ? viewModel.boutiques : filteredBoutiques
     }
     
@@ -37,7 +37,7 @@ struct RootScreen: View {
                     try await viewModel.loadBoutiques()
                 } catch {
                     // use the swiftUI alerts to display error
-                    print("\(NetworkError.badRequest) from RootScreen")
+                    print(error.localizedDescription)
                 }
             }
         }

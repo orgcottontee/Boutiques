@@ -11,34 +11,37 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchUSBoutiques() async throws -> [UnitedStatesDetails] {
-        guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else { throw NetworkError.unauthorized }
-        print("Here is the access token \(accessToken)")
-        print("-----------")
-
-        guard let baseURL = URL(string: Constants.UnitedStatesAPI.baseURL) else { throw NetworkError.invalidRequest }
-        print("Here is the baseURL \(baseURL)")
-        print("-----------")
+    // MARK: - Fetch US data
+    
+    func fetchUSBoutiques() async throws -> [UnitedStatesResponse] {
         
+        guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else {
+            throw NetworkError.unauthorized
+        }
+       
+        guard let baseURL = URL(string: CountryAPIs.UnitedStates.baseURL) else {
+            throw NetworkError.notFound
+        }
+    
         var request = URLRequest(url: baseURL,
                                  cachePolicy: .reloadRevalidatingCacheData
-                                 )
+        )
         
-        request.setValue("\(Constants.AirtableAPI.value) \(accessToken)",
-                         forHTTPHeaderField: Constants.AirtableAPI.header
-                         )
-        print("Here is the request \(request)")
-        print("-----------")
+        request.setValue("\(AirtableAPI.value) \(accessToken)",
+                         forHTTPHeaderField: AirtableAPI.header
+        )
         
         let (data, response) = try await URLSession.shared.data(for: request)
-        print("Here is the response \(response)")
-        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw NetworkError.badRequest
+        }
+
         do {
             let decoder = JSONDecoder()
             let decodedResponse = try decoder.decode(UnitedStatesData.self, from: data)
             return decodedResponse.records
         } catch {
-            throw NetworkError.badRequest
+            throw NetworkError.invalidRequest
         }
     }
 }
