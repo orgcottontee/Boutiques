@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct USBoutiqueRecord: Codable {
+struct UnitedStatesDetails: Codable {
     let id: String
-    let fields: USBoutique
+    let fields: BoutiqueDetails
 }
 
-struct USBoutiqueResponse: Codable {
-    let records: [USBoutiqueRecord]
+struct UnitedStatesData: Codable {
+    let records: [UnitedStatesDetails]
 }
 
-struct USBoutique: Codable {
+struct BoutiqueDetails: Codable {
     let category: String
     let latitude: Double
     let state: String
