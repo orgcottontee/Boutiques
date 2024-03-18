@@ -11,7 +11,7 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchUnitedStatesBoutiques() async throws -> [UnitedStatesModel] {
+    func fetchUSBoutiques() async throws -> [UnitedStatesDetails] {
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else { throw NetworkError.unauthorized }
         print("Here is the access token \(accessToken)")
         print("-----------")
@@ -35,7 +35,7 @@ final class NetworkManager {
         
         do {
             let decoder = JSONDecoder()
-            let decodedResponse = try decoder.decode(UnitedStatesResponse.self, from: data)
+            let decodedResponse = try decoder.decode(UnitedStatesData.self, from: data)
             return decodedResponse.records
         } catch {
             throw NetworkError.badRequest

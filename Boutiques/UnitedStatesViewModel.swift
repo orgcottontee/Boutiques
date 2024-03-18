@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Observation
 
 @Observable
 final class UnitedStatesViewModel {
     
-    var boutiques: [UnitedStatesModel] = []
+    private let manager: NetworkManager = NetworkManager()
     
-    func getBoutiques() async throws {
+    private(set) var boutiques: [UnitedStatesDetails] = []
+    
+    @MainActor
+    func loadBoutiques() async throws {
         do {
-            boutiques = try await NetworkManager.shared.fetchUnitedStatesBoutiques()
+            boutiques = try await manager.fetchUSBoutiques()
         } catch {
             throw NetworkError.notFound
         }
