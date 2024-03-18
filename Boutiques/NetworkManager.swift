@@ -11,27 +11,24 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchUSBoutiques() async throws -> [UnitedStatesDetails] {
+    
+    // MARK: - Fetch US data
+    
+    func fetchUSBoutiques() async throws -> [UnitedStatesResponse] {
+        
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else { throw NetworkError.unauthorized }
-        print("Here is the access token \(accessToken)")
-        print("-----------")
-
-        guard let baseURL = URL(string: Constants.UnitedStatesAPI.baseURL) else { throw NetworkError.invalidRequest }
-        print("Here is the baseURL \(baseURL)")
-        print("-----------")
+        
+        guard let baseURL = URL(string: CountryAPIs.UnitedStates.baseURL) else { throw NetworkError.invalidRequest }
         
         var request = URLRequest(url: baseURL,
                                  cachePolicy: .reloadRevalidatingCacheData
-                                 )
+        )
         
-        request.setValue("\(Constants.AirtableAPI.value) \(accessToken)",
-                         forHTTPHeaderField: Constants.AirtableAPI.header
-                         )
-        print("Here is the request \(request)")
-        print("-----------")
+        request.setValue("\(AirtableAPI.value) \(accessToken)",
+                         forHTTPHeaderField: AirtableAPI.header
+        )
         
-        let (data, response) = try await URLSession.shared.data(for: request)
-        print("Here is the response \(response)")
+        let (data, _) = try await URLSession.shared.data(for: request)
         
         do {
             let decoder = JSONDecoder()

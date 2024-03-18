@@ -13,7 +13,7 @@ final class UnitedStatesViewModel {
     
     private let manager: NetworkManager = NetworkManager()
     
-    private(set) var boutiques: [UnitedStatesDetails] = []
+    private(set) var boutiques: [UnitedStatesResponse] = []
     
     @MainActor
     func loadBoutiques() async throws {
