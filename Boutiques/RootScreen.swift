@@ -37,7 +37,7 @@ struct RootScreen: View {
                     try await viewModel.loadBoutiques()
                 } catch {
                     // use the swiftUI alerts to display error
-                    print("\(NetworkError.badRequest) from RootScreen")
+                    print(error.localizedDescription)
                 }
             }
         }

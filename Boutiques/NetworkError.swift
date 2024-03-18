@@ -7,34 +7,14 @@
 
 import Foundation
 
-enum NetworkError: Error, LocalizedError {
-    case badRequest
-    case unauthorized
-    case notFound
-    case invalidRequest
-    case noInternetConnection
-    case internalServerError
-    case badGateway
-    case serviceUnavailable
+enum NetworkError: String, Error {
     
-    var errorDescription: String? {
-        switch self {
-        case .badRequest:
-            return "The request failed, please try again later."
-        case .unauthorized:
-            return "We're having trouble accessing our server, please try again later."
-        case .notFound:
-            return "We're unable to load the details right now, please try again later."
-        case .invalidRequest:
-            return "The request could not be found, please try again later."
-        case .noInternetConnection:
-            return "Unable to load - please check your internet connection."
-        case .internalServerError:
-            return "Our servers encountered an unexpected error, please try again later."
-        case .badGateway:
-            return "Our servers are currently down, please try again later."
-        case .serviceUnavailable:
-            return "Our server is temporarily unavailable, please try again later."
-        }
-    }
+    case badRequest = "The request failed, please try again later."
+    case unauthorized = "We're having trouble accessing our server, please try again later."
+    case notFound = "We're unable to load the details right now, please try again later."
+    case invalidRequest = "The request could not be found, please try again later."
+    case noInternetConnection = "Unable to load - please check your internet connection."
+    case internalServerError = "Our servers encountered an unexpected error, please try again later."
+    case badGateway = "Our servers are currently down, please try again later."
+    case serviceUnavailable = "Our server is temporarily unavailable, please try again later."
 }
