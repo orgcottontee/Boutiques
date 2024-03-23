@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RootScreen: View {
+struct BoutiqueListScreen: View {
     
     @State private var viewModel = BoutiqueViewModel()
     @State private var searchText: String = ""
@@ -57,5 +57,5 @@ struct RootScreen: View {
 }
 
 #Preview {
-    RootScreen()
+    BoutiqueListScreen()
 }
