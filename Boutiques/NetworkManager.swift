@@ -13,7 +13,7 @@ final class NetworkManager {
     
     // MARK: - Fetch US data
     
-    func fetchUSBoutiques(sortField: String?, sortDirection: String?) async throws -> [UnitedStatesResponse] {
+    func fetchUSBoutiques(sortField: String?, sortDirection: String?) async throws -> [BoutiqueResponse] {
         
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else {
             throw NetworkError.unauthorized
@@ -43,9 +43,10 @@ final class NetworkManager {
 
         do {
             let decoder = JSONDecoder()
-            let decodedResponse = try decoder.decode(UnitedStatesData.self, from: data)
+            let decodedResponse = try decoder.decode(Boutique.self, from: data)
             return decodedResponse.records
-        } catch {
+        } catch(let error) {
+            print(error)
             throw NetworkError.invalidRequest
         }
     }

@@ -9,9 +9,9 @@ import Foundation
 import Observation
 
 @Observable
-final class UnitedStatesViewModel {
+final class BoutiqueViewModel {
         
-    private(set) var boutiques: [UnitedStatesResponse] = []
+    private(set) var boutiques: [BoutiqueResponse] = []
     private let sortField: String = "Name"
     private let sortDirection: String = "asc"
     

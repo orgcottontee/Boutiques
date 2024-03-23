@@ -9,28 +9,34 @@ import SwiftUI
 
 struct RootScreen: View {
     
-    @State private var viewModel = UnitedStatesViewModel()
+    @State private var viewModel = BoutiqueViewModel()
     @State private var searchText: String = ""
-    @State private var filteredBoutiques: [UnitedStatesResponse] = []
+    @State private var filteredBoutiques: [BoutiqueResponse] = []
     
     private func performSearch(keyword: String) {
         filteredBoutiques = boutiques.filter { boutique in
-            boutique.fields.name.contains(keyword)
+            boutique.fields.name.localizedCaseInsensitiveContains(keyword)
         }
     }
     
-    private var boutiques: [UnitedStatesResponse] {
+    private var boutiques: [BoutiqueResponse] {
         filteredBoutiques.isEmpty ? viewModel.boutiques : filteredBoutiques
     }
     
     var body: some View {
         NavigationStack {
-            List(boutiques, id: \.id) { boutique in
-                HStack {
-                    Text(boutique.fields.name)
-                    Spacer()
-                    Text(boutique.fields.state)
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 20) {
+                    ForEach(boutiques, id: \.id) { boutique in
+                        NavigationLink(value: boutique) {
+                            BoutiqueRowView(boutique: boutique)
+                                .foregroundStyle(.black)
+                        }
+                    }
                 }
+            }
+            .navigationDestination(for: BoutiqueResponse.self) { boutique in
+                    BoutiqueDetailScreen(boutique: boutique)
             }
             .task {
                 do {
