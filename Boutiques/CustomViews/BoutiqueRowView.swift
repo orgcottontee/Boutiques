@@ -14,12 +14,18 @@ struct BoutiqueRowView: View {
     var body: some View {
         HStack {
             Text(boutique.fields.name)
+                .font(.custom(BaskervilleFont.regular, size: 20))
+                .kerning(2.0)
+                .foregroundStyle(.accent)
             Spacer()
             Text(boutique.fields.state)
+                .font(.custom(BaskervilleFont.regular, size: 20))
+                .foregroundStyle(.accent)
         }
+        .padding()
     }
 }
 
-//#Preview {
-//    BoutiqueRowView()
-//}
+#Preview {
+    BoutiqueRowView(boutique: mockBoutiqueResponse)
+}

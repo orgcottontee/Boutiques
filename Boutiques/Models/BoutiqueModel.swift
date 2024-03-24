@@ -40,3 +40,21 @@ struct BoutiqueDetail: Codable, Hashable {
         
     }
 }
+
+
+let mockBoutiqueDetail = BoutiqueDetail(category: "Apparel",
+                                        latitude: 43.075195,
+                                        state: "CA",
+                                        longitude: -89.391917,
+                                        city: "San Diego",
+                                        address: "123 Main St",
+                                        postalCode: 12345,
+                                        name: "Example Boutique",
+                                        website: "https://www.example.com"
+)
+
+let mockBoutiqueResponse = BoutiqueResponse(id: "1",
+                                            fields: mockBoutiqueDetail
+)
+
+let mockBoutique = Boutique(records: [mockBoutiqueResponse])
