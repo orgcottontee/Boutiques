@@ -38,7 +38,13 @@ struct BoutiqueListScreen: View {
                                 }
                             }
                         } label: {
-                            Text("Filter by State")
+                            HStack {
+                                Text("Filter by State")
+                                    .font(.custom(BaskervilleFont.regular, size: 14))
+                                    .kerning(2.0)
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                            }
+                            .foregroundStyle(.accent)
                         }
                     }
                 }
