@@ -16,6 +16,7 @@ struct BoutiqueDetailScreen: View {
             Color(.background)
                 .ignoresSafeArea()
             VStack {
+                AsyncImage(url: URL(string: boutique.fields.logo?.last?.url ?? "No url available"))
                 Text(boutique.fields.name)
                 Text(boutique.fields.category)
                 Text(boutique.fields.website ?? "No website yet")
@@ -25,6 +26,6 @@ struct BoutiqueDetailScreen: View {
     }
 }
 
-//#Preview {
-//    BoutiqueDetailScreen()
-//}
+#Preview {
+    BoutiqueDetailScreen(boutique: mockBoutiqueResponse)
+}

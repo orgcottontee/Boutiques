@@ -7,14 +7,17 @@
 
 import Foundation
 
+
+
+struct Boutique: Codable, Hashable {
+    let records: [BoutiqueResponse]
+}
+
 struct BoutiqueResponse: Codable, Hashable {
     let id: String
     let fields: BoutiqueDetail
 }
 
-struct Boutique: Codable, Hashable {
-    let records: [BoutiqueResponse]
-}
 
 struct BoutiqueDetail: Codable, Hashable {
     let category: String
@@ -26,6 +29,7 @@ struct BoutiqueDetail: Codable, Hashable {
     let postalCode: Int
     let name: String
     let website: String?
+    let logo: [Logo]?
     
     private enum CodingKeys: String, CodingKey {
         case category = "Category"
@@ -37,21 +41,30 @@ struct BoutiqueDetail: Codable, Hashable {
         case postalCode = "Postal Code"
         case name = "Name"
         case website = "Website"
+        case logo = "Logo"
         
     }
+}
+
+struct Logo: Codable, Hashable {
+    let id: String
+    let url: String
 }
 
 
 let mockBoutiqueDetail = BoutiqueDetail(category: "Apparel",
                                         latitude: 43.075195,
-                                        state: "CA",
+                                        state: "NY",
                                         longitude: -89.391917,
-                                        city: "San Diego",
-                                        address: "123 Main St",
-                                        postalCode: 12345,
-                                        name: "Example Boutique",
-                                        website: "https://www.example.com"
-)
+                                        city: "New York",
+                                        address: "138 Sullivan St",
+                                        postalCode: 10012,
+                                        name: "& Son",
+                                        website: "https://shopandson.com/",
+                                        logo: [Logo(id: "attDbyoMeRtNHyzmz",
+                                                    url: "https://shopandson.com/cdn/shop/files/IMG_2752.png?v=1710186018&width=352"
+                                                   )]
+                                        )
 
 let mockBoutiqueResponse = BoutiqueResponse(id: "1",
                                             fields: mockBoutiqueDetail
