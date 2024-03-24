@@ -10,13 +10,29 @@ import Observation
 
 @Observable
 final class BoutiqueViewModel {
-        
+    
+    // MARK: - Properties
     private(set) var boutiques: [BoutiqueResponse] = []
-    private let sortField: String = "Name"
-    private let sortDirection: String = "asc"
+    
+    // MARK: Filter properties
+    var filterStatus: USState = USState.allStates
+    var filterResults: [BoutiqueResponse] {
+        filterStatus == .allStates ? searchResults : boutiques.filter { $0.fields.state == filterStatus.rawValue }
+    }
+    
+    // MARK: - Search properties
+    var searchText: String = ""
+    private var searchResults: [BoutiqueResponse] {
+        searchText.isEmpty ? boutiques : boutiques.filter { $0.fields.name.localizedCaseInsensitiveContains(searchText) }
+    }
+    
     
     @MainActor
     func loadBoutiques() async throws {
+        
+        let sortField: String = "Name"
+        let sortDirection: String = "asc"
+        
         do {
             boutiques = try await NetworkManager.shared.fetchUSBoutiques(sortField: sortField, sortDirection: sortDirection)
         } catch {

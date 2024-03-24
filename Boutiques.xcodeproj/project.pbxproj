@@ -18,6 +18,7 @@
 		DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */; };
 		DEB8F0A62BA364B600E95D06 /* BoutiqueListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A52BA364B600E95D06 /* BoutiqueListScreen.swift */; };
 		DEB8F0A82BA364DF00E95D06 /* BoutiqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A72BA364DF00E95D06 /* BoutiqueViewModel.swift */; };
+		DEDB80532BAFA042001D2F47 /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80522BAFA042001D2F47 /* StateList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DEB8F0A52BA364B600E95D06 /* BoutiqueListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueListScreen.swift; sourceTree = "<group>"; };
 		DEB8F0A72BA364DF00E95D06 /* BoutiqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueViewModel.swift; sourceTree = "<group>"; };
+		DEDB80522BAFA042001D2F47 /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 				DEDB804D2BAF6E20001D2F47 /* Models */,
 				DEDB804F2BAF7060001D2F47 /* Network */,
 				DEDB804A2BAF6E13001D2F47 /* Screens */,
-				DEDB804E2BAF6EC5001D2F47 /* Utilities */,
+				DEDB804E2BAF6EC5001D2F47 /* Utilities+Helpers */,
 				DEDB804B2BAF6E17001D2F47 /* CustomViews */,
 				DEDB804C2BAF6E1C001D2F47 /* ViewModels */,
 				DEB8F0802BA21F5500E95D06 /* Info.plist */,
@@ -123,12 +125,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DEDB804E2BAF6EC5001D2F47 /* Utilities */ = {
+		DEDB804E2BAF6EC5001D2F47 /* Utilities+Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */,
+				DEDB80522BAFA042001D2F47 /* StateList.swift */,
 			);
-			path = Utilities;
+			path = "Utilities+Helpers";
 			sourceTree = "<group>";
 		};
 		DEDB804F2BAF7060001D2F47 /* Network */ = {
@@ -215,6 +218,7 @@
 				DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */,
 				DE959BCE2BA8C27300544C5F /* BaseAPI.swift in Sources */,
 				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,
+				DEDB80532BAFA042001D2F47 /* StateList.swift in Sources */,
 				DEB8F0A82BA364DF00E95D06 /* BoutiqueViewModel.swift in Sources */,
 				DEB8F0A22BA3508700E95D06 /* BoutiqueModel.swift in Sources */,
 				DE67FACF2BACCD08008CC989 /* BoutiqueDetailScreen.swift in Sources */,

@@ -10,24 +10,12 @@ import SwiftUI
 struct BoutiqueListScreen: View {
     
     @State private var viewModel = BoutiqueViewModel()
-    @State private var searchText: String = ""
-    @State private var filteredBoutiques: [BoutiqueResponse] = []
-    
-    private func performSearch(keyword: String) {
-        filteredBoutiques = boutiques.filter { boutique in
-            boutique.fields.name.localizedCaseInsensitiveContains(keyword)
-        }
-    }
-    
-    private var boutiques: [BoutiqueResponse] {
-        filteredBoutiques.isEmpty ? viewModel.boutiques : filteredBoutiques
-    }
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 20) {
-                    ForEach(boutiques, id: \.id) { boutique in
+                    ForEach(viewModel.filterResults, id: \.id) { boutique in
                         NavigationLink(value: boutique) {
                             BoutiqueRowView(boutique: boutique)
                                 .foregroundStyle(.black)
@@ -35,8 +23,22 @@ struct BoutiqueListScreen: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Menu {
+                        Picker("", selection: $viewModel.filterStatus) {
+                            ForEach(USState.allCases, id: \.id) { state in
+                                Text(state.stateAbbreviation)
+                                    .tag(state)
+                            }
+                        }
+                    } label: {
+                        Text("Filter by State")
+                    }
+                }
+            }
             .navigationDestination(for: BoutiqueResponse.self) { boutique in
-                    BoutiqueDetailScreen(boutique: boutique)
+                BoutiqueDetailScreen(boutique: boutique)
             }
             .task {
                 do {
@@ -47,12 +49,10 @@ struct BoutiqueListScreen: View {
                 }
             }
         }
-        /* TODO: Seems like an Apple bug, but keep an eye out. Getting this error "If you want to see the backtrace, please set CG_NUMERICS_SHOW_BACKTRACE environmental variable.Error: this application, or a library it uses, has passed an invalid numeric value (NaN, or not-a-number) to CoreGraphics API and this value is being ignored. Please fix this problem.
-         */
-        .searchable(text: $searchText)
-        .onChange(of: searchText) {
-            performSearch(keyword: searchText)
-        }
+        .searchable(text: $viewModel.searchText,
+                    placement: .navigationBarDrawer(displayMode: .always),
+                    prompt: "Search boutique name..."
+        )
     }
 }
 
