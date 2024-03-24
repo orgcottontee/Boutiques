@@ -13,7 +13,7 @@ final class NetworkManager {
     
     // MARK: - Fetch US data
     
-    func fetchUSBoutiques() async throws -> [UnitedStatesResponse] {
+    func fetchUSBoutiques(sortField: String?, sortDirection: String?) async throws -> [BoutiqueResponse] {
         
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else {
             throw NetworkError.unauthorized
@@ -22,8 +22,13 @@ final class NetworkManager {
         guard let baseURL = URL(string: CountryAPIs.UnitedStates.baseURL) else {
             throw NetworkError.notFound
         }
+        
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
+        let sortFieldItem = URLQueryItem(name: "sort[0][field]", value: sortField)
+        let sortDirectionItem = URLQueryItem(name: "sort[0][direction]", value: sortDirection)
+        urlComponents.queryItems = [sortFieldItem, sortDirectionItem]
     
-        var request = URLRequest(url: baseURL,
+        var request = URLRequest(url: urlComponents.url!,
                                  cachePolicy: .reloadRevalidatingCacheData
         )
         
@@ -38,9 +43,10 @@ final class NetworkManager {
 
         do {
             let decoder = JSONDecoder()
-            let decodedResponse = try decoder.decode(UnitedStatesData.self, from: data)
+            let decodedResponse = try decoder.decode(Boutique.self, from: data)
             return decodedResponse.records
-        } catch {
+        } catch(let error) {
+            print(error)
             throw NetworkError.invalidRequest
         }
     }
