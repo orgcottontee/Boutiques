@@ -29,7 +29,6 @@
 		DEDB806E2BAFD204001D2F47 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB806D2BAFD204001D2F47 /* SettingsScreen.swift */; };
 		DEDB80702BAFD20F001D2F47 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */; };
 		DEDB80722BAFD254001D2F47 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80712BAFD254001D2F47 /* TabBarView.swift */; };
-		DEDB80742BB05AA7001D2F47 /* AirtableAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80732BB05AA7001D2F47 /* AirtableAPIConstants.swift */; };
 		DEF61AA42BB1D44800D94484 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61AA32BB1D44800D94484 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		DEDB806D2BAFD204001D2F47 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
 		DEDB80712BAFD254001D2F47 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		DEDB80732BB05AA7001D2F47 /* AirtableAPIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableAPIConstants.swift; sourceTree = "<group>"; };
 		DEF61AA32BB1D44800D94484 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +150,6 @@
 			children = (
 				DEB8F0A12BA3508700E95D06 /* BoutiqueModel.swift */,
 				DEDB80632BAFCF79001D2F47 /* TabIcon.swift */,
-				DEDB80732BB05AA7001D2F47 /* AirtableAPIConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,7 +275,6 @@
 				DEDB805A2BAFAC86001D2F47 /* CustomFonts.swift in Sources */,
 				DE67FACF2BACCD08008CC989 /* BoutiqueDetailScreen.swift in Sources */,
 				DEB8F0A62BA364B600E95D06 /* BoutiqueListScreen.swift in Sources */,
-				DEDB80742BB05AA7001D2F47 /* AirtableAPIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

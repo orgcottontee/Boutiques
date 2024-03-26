@@ -12,27 +12,24 @@ struct BoutiqueRowView: View {
     let boutique: BoutiqueResponse
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             Text(boutique.fields.name)
                 .font(.custom(BaskervilleFont.regular, size: 20))
                 .kerning(2.0)
                 .foregroundStyle(.accent)
-            Text("\(boutique.fields.city), \(boutique.fields.state)")
-                .font(.custom(UniversFont.light, size: 12))
-                .kerning(2.0)
+            HStack {
+                Text(boutique.fields.category)
+                    .font(.custom(UniversFont.light, size: 12))
+                    .kerning(2.0)
+                    .foregroundStyle(.accent)
+                Spacer()
+                Text("\(boutique.fields.city), \(boutique.fields.state)")
+                    .font(.custom(UniversFont.light, size: 12))
+                    .kerning(2.0)
+                    .foregroundStyle(.accent)
+            }
+            Divider()
         }
-//        HStack(alignment: .top) {
-//            Text(boutique.fields.name)
-//                .font(.custom(BaskervilleFont.regular, size: 20))
-//                .kerning(2.0)
-//                .foregroundStyle(.accent)
-//                
-//                
-//            Spacer()
-//            Text("\(boutique.fields.city), \(boutique.fields.state)")
-//                .font(.custom(BaskervilleFont.regular, size: 20))
-//                .foregroundStyle(.accent)
-//        }
     }
 }
 

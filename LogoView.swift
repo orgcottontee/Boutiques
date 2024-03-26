@@ -51,9 +51,9 @@ struct LogoView: View {
             .padding()
         }
         .frame(width: 250, height: 300)
-        .background(.ultraThickMaterial)
+        .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 8)))
-        .shadow(color: .gray, radius: 10, x: 8, y: 8)
+        .shadow(color: .gray, radius: 20, x: 10, y: 30)
     }
 }
 

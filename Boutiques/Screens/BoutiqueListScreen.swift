@@ -28,6 +28,7 @@ struct BoutiqueListScreen: View {
                         }
                     }
                 }
+                .padding()
                 .toolbar {
                     ToolbarItem {
                         Menu {
