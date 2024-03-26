@@ -30,6 +30,7 @@
 		DEDB80702BAFD20F001D2F47 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */; };
 		DEDB80722BAFD254001D2F47 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80712BAFD254001D2F47 /* TabBarView.swift */; };
 		DEDB80742BB05AA7001D2F47 /* AirtableAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80732BB05AA7001D2F47 /* AirtableAPIConstants.swift */; };
+		DEF61AA42BB1D44800D94484 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61AA32BB1D44800D94484 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
 		DEDB80712BAFD254001D2F47 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		DEDB80732BB05AA7001D2F47 /* AirtableAPIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirtableAPIConstants.swift; sourceTree = "<group>"; };
+		DEF61AA32BB1D44800D94484 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		DEB8F0652BA21DE600E95D06 = {
 			isa = PBXGroup;
 			children = (
+				DEF61AA32BB1D44800D94484 /* LogoView.swift */,
 				DEB8F0702BA21DE600E95D06 /* Boutiques */,
 				DEB8F06F2BA21DE600E95D06 /* Products */,
 			);
@@ -261,6 +264,7 @@
 				DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */,
 				DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */,
 				DEDB80702BAFD20F001D2F47 /* FavoritesScreen.swift in Sources */,
+				DEF61AA42BB1D44800D94484 /* LogoView.swift in Sources */,
 				DEDB80622BAFCF0A001D2F47 /* RootTabScreen.swift in Sources */,
 				DE959BCE2BA8C27300544C5F /* BaseAPI.swift in Sources */,
 				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,

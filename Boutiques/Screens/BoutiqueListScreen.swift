@@ -37,6 +37,7 @@ struct BoutiqueListScreen: View {
                                         .tag(state)
                                 }
                             }
+                            .pickerStyle(.palette)
                         } label: {
                             HStack {
                                 Text("Filter by State")
