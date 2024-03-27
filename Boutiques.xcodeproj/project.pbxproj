@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3615B32BB469570095A060 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3615B22BB469570095A060 /* MapViewModel.swift */; };
 		DE67FACF2BACCD08008CC989 /* BoutiqueDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */; };
 		DE67FAD12BACD594008CC989 /* BoutiqueRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */; };
 		DE959BCE2BA8C27300544C5F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE959BCD2BA8C27300544C5F /* BaseAPI.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE3615B22BB469570095A060 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueDetailScreen.swift; sourceTree = "<group>"; };
 		DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueRowView.swift; sourceTree = "<group>"; };
 		DE959BCD2BA8C27300544C5F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		DEB8F0652BA21DE600E95D06 = {
 			isa = PBXGroup;
 			children = (
-				DEF61AA32BB1D44800D94484 /* LogoView.swift */,
 				DEB8F0702BA21DE600E95D06 /* Boutiques */,
 				DEB8F06F2BA21DE600E95D06 /* Products */,
 			);
@@ -122,6 +123,7 @@
 				DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */,
 				DEDB80612BAFCF09001D2F47 /* RootTabScreen.swift */,
 				DEDB806B2BAFD1FD001D2F47 /* MapScreen.swift */,
+				DE3615B22BB469570095A060 /* MapViewModel.swift */,
 				DEDB806D2BAFD204001D2F47 /* SettingsScreen.swift */,
 				DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */,
 			);
@@ -131,6 +133,7 @@
 		DEDB804B2BAF6E17001D2F47 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				DEF61AA32BB1D44800D94484 /* LogoView.swift */,
 				DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */,
 				DEDB80712BAFD254001D2F47 /* TabBarView.swift */,
 			);
@@ -267,6 +270,7 @@
 				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,
 				DEDB80532BAFA042001D2F47 /* USState.swift in Sources */,
 				DEB8F0A82BA364DF00E95D06 /* BoutiqueViewModel.swift in Sources */,
+				DE3615B32BB469570095A060 /* MapViewModel.swift in Sources */,
 				DEDB80722BAFD254001D2F47 /* TabBarView.swift in Sources */,
 				DEDB80602BAFC0F2001D2F47 /* NavBar+Helper.swift in Sources */,
 				DEDB806C2BAFD1FD001D2F47 /* MapScreen.swift in Sources */,

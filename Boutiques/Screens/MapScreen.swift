@@ -9,11 +9,35 @@ import SwiftUI
 import MapKit
 
 struct MapScreen: View {
+    
+    @State private var viewModel = MapViewModel()
+    
     var body: some View {
-        ZStack {
-            Color(.background)
-                .ignoresSafeArea()
-            Map(initialPosition: .region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 40.75773, longitude: -73.985708), span: MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0))))        }
+        Map(initialPosition: viewModel.camera) {
+            ForEach(viewModel.boutiques, id: \.id) { boutique in
+                Annotation(boutique.fields.name,
+                           coordinate: CLLocationCoordinate2D(latitude: boutique.fields.latitude,
+                                                              longitude: boutique.fields.longitude)
+                ) {
+                    ZStack {
+                        Circle()
+                            .foregroundStyle(.black.opacity(0.75))
+                    }
+                }
+            }
+        }
+        .mapStyle(.hybrid)
+        .mapControls {
+            MapCompass()
+            MapPitchToggle()
+        }
+        .task {
+            do {
+                try await viewModel.loadBoutiques()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

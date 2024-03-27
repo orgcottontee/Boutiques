@@ -33,11 +33,8 @@ final class BoutiqueViewModel {
     @MainActor
     func loadBoutiques() async throws {
         
-        let sortField: String = "Name"
-        let sortDirection: String = "asc"
-        
         do {
-            boutiques = try await NetworkManager.shared.fetchUSBoutiques(sortField: sortField, sortDirection: sortDirection)
+            boutiques = try await NetworkManager.shared.fetchBoutiqueAscOrder(sortField: AirtableAPI.sortByName, sortDirection: AirtableAPI.sortByAsc)
         } catch {
             print(error.localizedDescription)
             throw NetworkError.badGateway
