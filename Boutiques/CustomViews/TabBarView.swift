@@ -9,11 +9,11 @@ import SwiftUI
 
 struct TabBarView: View {
     
-    @Binding var selected: TabIcon
+    @Binding var selected: Constants.TabIcon
     
     var body: some View {
         HStack {
-            ForEach(TabIcon.allCases, id: \.rawValue) { tab in
+            ForEach(Constants.TabIcon.allCases, id: \.rawValue) { tab in
                 Spacer()
                 Button {
                     selected = tab

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootTabScreen: View {
     
-    @State private var selected: TabIcon = .door
+    @State private var selected: Constants.TabIcon = .door
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -22,13 +22,13 @@ struct RootTabScreen: View {
             VStack {
                 TabView(selection: $selected) {
                     BoutiqueListScreen()
-                        .tag(TabIcon.door)
+                        .tag(Constants.TabIcon.door)
                     MapScreen()
-                        .tag(TabIcon.map)
+                        .tag(Constants.TabIcon.map)
                     FavoritesScreen()
-                        .tag(TabIcon.heart)
+                        .tag(Constants.TabIcon.heart)
                     SettingsScreen()
-                        .tag(TabIcon.gear)
+                        .tag(Constants.TabIcon.gear)
                 }
                 TabBarView(selected: $selected)
             }

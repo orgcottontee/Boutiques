@@ -16,12 +16,10 @@ extension MapScreen {
         // MARK: - Properties
         
         private(set) var boutiques: [BoutiqueResponse] = []
-     
-        
-        var camera: MapCameraPosition = .region(.init(center: CLLocationCoordinate2D(latitude: 39.831395,
-                                                                                     longitude: -98.450229),
-                                                      span: MKCoordinateSpan(latitudeDelta: 50.0,
-                                                                             longitudeDelta: 50.0))
+        var camera: MapCameraPosition = .region(.init(center: CLLocationCoordinate2D(latitude: Constants.MapScreen.initialLatitude,
+                                                                                     longitude: Constants.MapScreen.initialLongitude),
+                                                      span: MKCoordinateSpan(latitudeDelta: Constants.MapScreen.latitudeDelta,
+                                                                             longitudeDelta: Constants.MapScreen.longitudeDelta))
                                                 )
 
         // MARK: - Actions
