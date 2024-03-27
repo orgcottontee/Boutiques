@@ -12,15 +12,22 @@ struct BoutiqueDetailScreen: View {
     let boutique: BoutiqueResponse
     
     var body: some View {
-        VStack {
-            Text(boutique.fields.name)
-            Text(boutique.fields.category)
-            Text(boutique.fields.website ?? "No website yet")
-            Text(boutique.fields.city)
+        ZStack {
+            Color(.background)
+                .ignoresSafeArea()
+            VStack {
+                LogoView(boutique: boutique)
+                Spacer()
+                Text(boutique.fields.name)
+                Text(boutique.fields.category)
+                Text(boutique.fields.website ?? "No website yet")
+                Text(boutique.fields.city)
+            }
+            .padding()
         }
     }
 }
 
-//#Preview {
-//    BoutiqueDetailScreen()
-//}
+#Preview {
+    BoutiqueDetailScreen(boutique: mockBoutiqueResponse)
+}

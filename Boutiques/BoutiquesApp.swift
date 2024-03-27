@@ -11,7 +11,7 @@ import SwiftUI
 struct BoutiquesApp: App {
     var body: some Scene {
         WindowGroup {
-            BoutiqueListScreen()
+            RootTabScreen()
         }
     }
 }
