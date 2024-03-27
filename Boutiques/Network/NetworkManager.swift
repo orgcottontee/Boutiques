@@ -11,6 +11,8 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
+    private init() { }
+    
     // MARK: - Fetch US data
     
     func fetchUSBoutiques(sortField: String?, sortDirection: String?) async throws -> [BoutiqueResponse] {

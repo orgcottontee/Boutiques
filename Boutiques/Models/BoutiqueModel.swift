@@ -51,7 +51,6 @@ struct Logo: Codable, Hashable {
     let url: String
 }
 
-
 let mockBoutiqueDetail = BoutiqueDetail(category: "Apparel",
                                         latitude: 43.075195,
                                         state: "NY",

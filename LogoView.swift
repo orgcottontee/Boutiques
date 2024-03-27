@@ -13,13 +13,9 @@ struct LogoView: View {
     
     /*
      Need to update logo:
-     Blue in green
-     Colbo
-     Cueva
-     Dashi needs black words
-     Front general store
-     Garconne
-     Mohawk - white background? start here again to check
+   
+     Shop bosewell
+     Today clothing
      */
     
     var body: some View {
@@ -53,7 +49,7 @@ struct LogoView: View {
         .frame(width: 250, height: 300)
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 8)))
-        .shadow(color: .gray, radius: 20, x: 10, y: 30)
+        .shadow(color: .background, radius: 8, x: 5 , y: 5)
     }
 }
 
