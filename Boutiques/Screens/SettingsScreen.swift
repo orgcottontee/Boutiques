@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsScreen: View {
     
     @AppStorage("appTheme") private var selectedAppTheme = AppTheme.system
-
+    
     var selectedTheme: ColorScheme? {
         switch selectedAppTheme {
         case .lightTheme:
@@ -21,34 +21,35 @@ struct SettingsScreen: View {
             return nil
         }
     }
+    
     var body: some View {
         NavigationStack {
-                    Form {
-                        Picker(selection: $selectedAppTheme) {
-                            ForEach(AppTheme.allCases) { theme in
-                                Text(theme.rawValue)
-                                    .tag(theme)
-                            }
-                        } label: {
-                            Label("Appearance", systemImage: "circle.righthalf.filled")
-                        }
-
-
-                        Section {
-                            HStack {
-                                Text("Version")
-                                Spacer()
-                                Text("1.0")
-                            }
-
-                        }
-
-
+            Form {
+                Picker(selection: $selectedAppTheme) {
+                    ForEach(AppTheme.allCases) { theme in
+                        Text(theme.rawValue)
+                            .tag(theme)
                     }
-                    .navigationTitle("Settings")
-                    .navigationBarTitleDisplayMode(.inline)
+                } label: {
+                    Label("Appearance", systemImage: "circle.righthalf.filled")
                 }
-                .preferredColorScheme(selectedTheme)
+                .listRowBackground(Color.listRowBackground)
+                
+                Section {
+                    HStack {
+                        Text("Version")
+                        Spacer()
+                        Text("1.0")
+                    }
+                }
+                .listRowBackground(Color.listRowBackground)
+            }
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .scrollContentBackground(.hidden)
+            .background(Color.background)
+        }
+        .preferredColorScheme(selectedTheme)
     }
 }
 

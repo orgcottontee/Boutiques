@@ -28,7 +28,6 @@ extension MapScreen {
         
         @MainActor
         func loadBoutiques() async throws {
-            
             do {
                 boutiques = try await NetworkManager.shared.fetchBoutiqueForMap()
             } catch {

@@ -17,7 +17,7 @@ final class BoutiqueViewModel {
     
     // MARK: Filter properties
     
-    var filterStatus: USState = USState.allStates
+    var filterStatus: Constants.USState = Constants.USState.allStates
     var filterResults: [BoutiqueResponse] {
         filterStatus == .allStates ? searchResults : boutiques.filter { $0.fields.state == filterStatus.rawValue }
     }

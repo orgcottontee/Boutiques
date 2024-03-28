@@ -11,6 +11,7 @@
 		DE3615B32BB469570095A060 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3615B22BB469570095A060 /* MapViewModel.swift */; };
 		DE67FACF2BACCD08008CC989 /* BoutiqueDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */; };
 		DE67FAD12BACD594008CC989 /* BoutiqueRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */; };
+		DE718A0D2BB5DA79002ABA9C /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE718A0C2BB5DA79002ABA9C /* AppTheme.swift */; };
 		DE959BCE2BA8C27300544C5F /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE959BCD2BA8C27300544C5F /* BaseAPI.swift */; };
 		DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0712BA21DE600E95D06 /* BoutiquesApp.swift */; };
 		DEB8F0762BA21DE700E95D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB8F0752BA21DE700E95D06 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		DE3615B22BB469570095A060 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueDetailScreen.swift; sourceTree = "<group>"; };
 		DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueRowView.swift; sourceTree = "<group>"; };
+		DE718A0C2BB5DA79002ABA9C /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		DE959BCD2BA8C27300544C5F /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		DEB8F06E2BA21DE600E95D06 /* Boutiques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boutiques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB8F0712BA21DE600E95D06 /* BoutiquesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiquesApp.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */,
 				DEDB805F2BAFC0F2001D2F47 /* NavBar+Helper.swift */,
+				DE718A0C2BB5DA79002ABA9C /* AppTheme.swift */,
 			);
 			path = "Utilities+Helpers";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE718A0D2BB5DA79002ABA9C /* AppTheme.swift in Sources */,
 				DEDB806E2BAFD204001D2F47 /* SettingsScreen.swift in Sources */,
 				DE67FAD12BACD594008CC989 /* BoutiqueRowView.swift in Sources */,
 				DE2BFEBE2BB4C8E300D02450 /* AlertView.swift in Sources */,

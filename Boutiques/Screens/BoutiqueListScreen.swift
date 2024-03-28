@@ -33,7 +33,7 @@ struct BoutiqueListScreen: View {
                     ToolbarItem {
                         Menu {
                             Picker("", selection: $viewModel.filterStatus) {
-                                ForEach(USState.allCases, id: \.id) { state in
+                                ForEach(Constants.USState.allCases, id: \.id) { state in
                                     Text(state.stateAbbreviation)
                                         .tag(state)
                                 }
