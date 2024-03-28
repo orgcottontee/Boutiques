@@ -36,8 +36,7 @@ final class BoutiqueViewModel {
         do {
             boutiques = try await NetworkManager.shared.fetchBoutiqueAscOrder(sortField: AirtableAPI.sortByName, sortDirection: AirtableAPI.sortByAsc)
         } catch {
-            print(error.localizedDescription)
-            throw NetworkError.badGateway
+            print("Error from BoutiqueVM: \(error)")
         }
     }
 }

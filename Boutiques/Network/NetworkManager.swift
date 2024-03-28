@@ -20,11 +20,11 @@ final class NetworkManager {
     func fetchBoutiqueAscOrder(sortField: String?, sortDirection: String?) async throws -> [BoutiqueResponse] {
         
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else {
-            throw NetworkError.unauthorized
+            throw NetworkError.invalidAccessToken
         }
        
         guard let baseURL = URL(string: AirtableAPI.UnitedStates.baseURL) else {
-            throw NetworkError.notFound
+            throw NetworkError.invalidURL(AirtableAPI.UnitedStates.baseURL)
         }
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
@@ -41,15 +41,16 @@ final class NetworkManager {
         )
         
         let (data, response) = try await URLSession.shared.data(for: request)
+        
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw NetworkError.badRequest
+            throw NetworkError.invalidRequest
         }
 
         do {
             let decodedResponse = try decoder.decode(Boutique.self, from: data)
             return decodedResponse.records
         } catch(let error) {
-            print(error)
+            print("Unable to decode response \(error)")
             throw NetworkError.invalidRequest
         }
     }
@@ -59,11 +60,11 @@ final class NetworkManager {
     func fetchBoutiqueForMap() async throws -> [BoutiqueResponse] {
         
         guard let accessToken = Bundle.main.infoDictionary?["ACCESS_TOKEN"] as? String else {
-            throw NetworkError.unauthorized
+            throw NetworkError.invalidAccessToken
         }
        
         guard let baseURL = URL(string: AirtableAPI.UnitedStates.baseURL) else {
-            throw NetworkError.notFound
+            throw NetworkError.invalidURL(AirtableAPI.UnitedStates.baseURL)
         }
         
         var request = URLRequest(url: baseURL,
@@ -76,14 +77,14 @@ final class NetworkManager {
         
         let (data, response) = try await URLSession.shared.data(for: request)
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw NetworkError.badRequest
+            throw NetworkError.invalidRequest
         }
 
         do {
             let decodedResponse = try decoder.decode(Boutique.self, from: data)
             return decodedResponse.records
         } catch(let error) {
-            print(error)
+            print("Unable to decode response \(error)")
             throw NetworkError.invalidRequest
         }
     }

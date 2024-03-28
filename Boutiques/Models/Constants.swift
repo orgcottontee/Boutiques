@@ -52,4 +52,32 @@ enum Constants {
         static let latitudeDelta = 50.0
         static let longitudeDelta = 50.0
     }
+    
+    // MARK: - List of States
+    
+    enum USState: String, CaseIterable {
+      case allStates
+      case california = "CA"
+      case colorado = "CO"
+      case illinois = "IL"
+      case michigan = "MI"
+      case minnesota = "MN"
+      case newYork = "NY"
+      case oregon = "OR"
+      case pennsylvania = "PA"
+      case washington = "WA"
+      case wisconsin = "WI"
+       
+      var id: String { self.rawValue }
+     
+      var stateAbbreviation: String {
+        switch self {
+        case .allStates:
+          return "All"
+        default:
+          return self.rawValue
+        }
+      }
+    }
+
 }

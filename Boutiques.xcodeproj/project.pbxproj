@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2BFEBE2BB4C8E300D02450 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BFEBD2BB4C8E300D02450 /* AlertView.swift */; };
 		DE3615B32BB469570095A060 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3615B22BB469570095A060 /* MapViewModel.swift */; };
 		DE67FACF2BACCD08008CC989 /* BoutiqueDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */; };
 		DE67FAD12BACD594008CC989 /* BoutiqueRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */; };
@@ -19,7 +20,6 @@
 		DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */; };
 		DEB8F0A62BA364B600E95D06 /* BoutiqueListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A52BA364B600E95D06 /* BoutiqueListScreen.swift */; };
 		DEB8F0A82BA364DF00E95D06 /* BoutiqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8F0A72BA364DF00E95D06 /* BoutiqueViewModel.swift */; };
-		DEDB80532BAFA042001D2F47 /* USState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80522BAFA042001D2F47 /* USState.swift */; };
 		DEDB80562BAFAC4E001D2F47 /* UniversLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DEDB80552BAFAC4E001D2F47 /* UniversLTStd-Light.otf */; };
 		DEDB80582BAFAC6F001D2F47 /* Baskerville.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DEDB80572BAFAC6E001D2F47 /* Baskerville.ttc */; };
 		DEDB805A2BAFAC86001D2F47 /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB80592BAFAC86001D2F47 /* CustomFonts.swift */; };
@@ -34,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE2BFEBD2BB4C8E300D02450 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		DE3615B22BB469570095A060 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueDetailScreen.swift; sourceTree = "<group>"; };
 		DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueRowView.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DEB8F0A52BA364B600E95D06 /* BoutiqueListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueListScreen.swift; sourceTree = "<group>"; };
 		DEB8F0A72BA364DF00E95D06 /* BoutiqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutiqueViewModel.swift; sourceTree = "<group>"; };
-		DEDB80522BAFA042001D2F47 /* USState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USState.swift; sourceTree = "<group>"; };
 		DEDB80552BAFAC4E001D2F47 /* UniversLTStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UniversLTStd-Light.otf"; sourceTree = "<group>"; };
 		DEDB80572BAFAC6E001D2F47 /* Baskerville.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Baskerville.ttc; sourceTree = "<group>"; };
 		DEDB80592BAFAC86001D2F47 /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
@@ -123,7 +123,6 @@
 				DE67FACE2BACCD08008CC989 /* BoutiqueDetailScreen.swift */,
 				DEDB80612BAFCF09001D2F47 /* RootTabScreen.swift */,
 				DEDB806B2BAFD1FD001D2F47 /* MapScreen.swift */,
-				DE3615B22BB469570095A060 /* MapViewModel.swift */,
 				DEDB806D2BAFD204001D2F47 /* SettingsScreen.swift */,
 				DEDB806F2BAFD20F001D2F47 /* FavoritesScreen.swift */,
 			);
@@ -133,6 +132,7 @@
 		DEDB804B2BAF6E17001D2F47 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				DE2BFEBD2BB4C8E300D02450 /* AlertView.swift */,
 				DEF61AA32BB1D44800D94484 /* LogoView.swift */,
 				DE67FAD02BACD594008CC989 /* BoutiqueRowView.swift */,
 				DEDB80712BAFD254001D2F47 /* TabBarView.swift */,
@@ -143,6 +143,7 @@
 		DEDB804C2BAF6E1C001D2F47 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DE3615B22BB469570095A060 /* MapViewModel.swift */,
 				DEB8F0A72BA364DF00E95D06 /* BoutiqueViewModel.swift */,
 			);
 			path = ViewModels;
@@ -161,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				DEB8F0A32BA3578F00E95D06 /* NetworkError.swift */,
-				DEDB80522BAFA042001D2F47 /* USState.swift */,
 				DEDB805F2BAFC0F2001D2F47 /* NavBar+Helper.swift */,
 			);
 			path = "Utilities+Helpers";
@@ -261,6 +261,7 @@
 			files = (
 				DEDB806E2BAFD204001D2F47 /* SettingsScreen.swift in Sources */,
 				DE67FAD12BACD594008CC989 /* BoutiqueRowView.swift in Sources */,
+				DE2BFEBE2BB4C8E300D02450 /* AlertView.swift in Sources */,
 				DEB8F0A02BA34F9800E95D06 /* NetworkManager.swift in Sources */,
 				DEB8F0722BA21DE600E95D06 /* BoutiquesApp.swift in Sources */,
 				DEDB80702BAFD20F001D2F47 /* FavoritesScreen.swift in Sources */,
@@ -268,7 +269,6 @@
 				DEDB80622BAFCF0A001D2F47 /* RootTabScreen.swift in Sources */,
 				DE959BCE2BA8C27300544C5F /* BaseAPI.swift in Sources */,
 				DEB8F0A42BA3578F00E95D06 /* NetworkError.swift in Sources */,
-				DEDB80532BAFA042001D2F47 /* USState.swift in Sources */,
 				DEB8F0A82BA364DF00E95D06 /* BoutiqueViewModel.swift in Sources */,
 				DE3615B32BB469570095A060 /* MapViewModel.swift in Sources */,
 				DEDB80722BAFD254001D2F47 /* TabBarView.swift in Sources */,
